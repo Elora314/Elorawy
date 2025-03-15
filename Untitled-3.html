@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>按钮点击切换图片</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">显示图片1</button>
+    <button id="btn2">显示图片2</button>
+    < img id="showImg" src="" alt="展示图片">
+
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                $('#showImg').attr('src', "tp2.jpg"); // 请替换为实际的图片1路径及文件名
+            });
+            $('#btn2').click(function () {
+                $('#showImg').attr('src', "tp3.jpg"); // 请替换为实际的图片2路径及文件名
+            });
+        });
+    </script>
+</body>
+
+</html>
